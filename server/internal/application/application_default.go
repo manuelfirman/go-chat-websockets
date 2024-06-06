@@ -68,6 +68,7 @@ func (a *ApplicationDefault) SetUp() {
 	buildMessageDependencies(database)
 	buildFriendDependencies(database)
 
+	// Build websocket dependencies
 	a.buildWebSocket(database)
 
 	health := health.NewHealthChecker(database)
